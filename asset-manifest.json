@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pokeapi-reactjs/static/css/main.cef85c9f.css",
+    "main.js": "/pokeapi-reactjs/static/js/main.873a5ac4.js",
+    "index.html": "/pokeapi-reactjs/index.html",
+    "main.cef85c9f.css.map": "/pokeapi-reactjs/static/css/main.cef85c9f.css.map",
+    "main.873a5ac4.js.map": "/pokeapi-reactjs/static/js/main.873a5ac4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cef85c9f.css",
+    "static/js/main.873a5ac4.js"
+  ]
+}

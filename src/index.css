@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Variables */
+
+:root {
+  --primary-color: burlywood;
+  --secondary-color: gray;
+  --card-background-1: rgb(201, 94, 94);
+  --card-background-2: #000;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Box sizing */
+
+html {
+  box-sizing: border-box;
 }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* Estilos */
+

@@ -5,6 +5,29 @@
   --secondary-color: gray;
   --card-background-1: rgb(201, 94, 94);
   --card-background-2: #000;
+
+  --type-normal: ghostwhite;
+  --type-fighting: chocolate;
+  --type-flying: lightblue;
+  --type-poison: purple;
+  --type-ground: brown;
+  --type-rock: gray;
+  --type-bug: darkgreen;
+  --type-ghost: darkslateblue;
+  --type-steel: silver;
+  --type-fire: red;
+  --type-water: blue;
+  --type-grass: green;
+  --type-electric: yellow;
+  --type-psychic: violet;
+  --type-ice: lightblue;
+  --type-dragon: darkviolet;
+  --type-dark: dark;
+  --type-fairy: pink;
+  --type-unknown: white;
+  --type-shadow: dimgrey;
+
+
 }
 
 /* Box sizing */
@@ -21,3 +44,30 @@ html {
 
 /* Estilos */
 
+body {
+  display: flex;
+  justify-content: center;
+  background: rgba(229, 240, 182, 0.25);
+}
+
+.App {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn {
+  width: 250px;
+  padding: 1rem 0px;
+  font-size: 24px;
+  margin-top: 2.5rem;
+  background-color: salmon;
+  border: none;
+  color: azure;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 50px;
+  cursor: pointer;
+}

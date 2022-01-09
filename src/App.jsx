@@ -1,18 +1,19 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Card, Search } from "./components"
+import { PokemonContext } from "./Context"
 
 function App() {
 
   const [pokemon, setPokemon] = useState({})
+  const { pokemonId, setPokemonId } = useContext(PokemonContext)
 
   useEffect(() => {
-    getPokemon()
-  }, [])
+    getPokemon(pokemonId)
+  }, [pokemonId])
 
-  // TODO: Está bien que haya una fetch fuera del useEffect? (en este caso en el onClick del boton Reintentar)
-  const getPokemon = () => {
-    const order = Math.floor(Math.random() * (150 - 1 + 1) + 1)
-    fetch(`https://pokeapi.co/api/v2/pokemon/${order}`)
+  // TODO: Está bien que haya una fetch fuera del useEffect? (en este caso en el onClick del boton Reintentar). Una opcion sería tener un state para el número aleatorio y que al actualizarse se dispare el useEffect, pero quería ahorrar un state.
+  const getPokemon = (id) => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((response) => response.json())
       .then(data => {
         const info = {
@@ -29,6 +30,10 @@ function App() {
       })
   }
 
+  const handleRandom = ()=>{
+    const order = Math.floor(Math.random() * (150 - 1 + 1) + 1)
+    setPokemonId(order)
+  }
 
   return (
     <div className="App">
@@ -41,7 +46,7 @@ function App() {
           {Object.keys(pokemon).length > 0 && (
             <>
               <Card data={pokemon} />
-              <button className="btn" onClick={getPokemon}> Reintentar </button>
+              <button className="btn" onClick={handleRandom}> Aleatorio </button>
             </>
           )}
         </section>

@@ -6,6 +6,8 @@ export const PokemonContext = React.createContext({})
 export const PokemonContextProvider = ({children})=>{
 
   const [pokemones, setPokemones] = useState([])
+  const [pokemonId, setPokemonId] = useState('')
+
   useEffect(()=>{
     fetch("https://pokeapi.co/api/v2/pokemon?limit=150")
     .then(response=>response.json())
@@ -16,7 +18,7 @@ export const PokemonContextProvider = ({children})=>{
   }, [])
 
   return (
-    <PokemonContext.Provider value={{pokemones}}>
+    <PokemonContext.Provider value={{pokemones, pokemonId, setPokemonId}}>
       {children}
     </PokemonContext.Provider>
   )

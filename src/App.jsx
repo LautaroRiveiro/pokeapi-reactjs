@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
-import { Card } from "./components/Card";
+import { useContext, useEffect, useState } from "react"
+import { Card } from "./components/Card"
+import {PokemonContext} from './Context'
 
 function App() {
 
+  const {pokemones} = useContext(PokemonContext)
   const [pokemon, setPokemon] = useState({})
 
   useEffect(() => {
@@ -39,7 +41,7 @@ function App() {
         </>
       )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,16 +1,15 @@
-import { useContext, useEffect, useState } from "react"
-import { Card, SearchBar, PokemonList } from "./components"
-import { PokemonContext } from './Context'
+import { useEffect, useState } from "react"
+import { Card, Search } from "./components"
 
 function App() {
 
-  const { pokemones } = useContext(PokemonContext)
   const [pokemon, setPokemon] = useState({})
 
   useEffect(() => {
     getPokemon()
   }, [])
 
+  // TODO: Está bien que haya una fetch fuera del useEffect? (en este caso en el onClick del boton Reintentar)
   const getPokemon = () => {
     const order = Math.floor(Math.random() * (150 - 1 + 1) + 1)
     fetch(`https://pokeapi.co/api/v2/pokemon/${order}`)
@@ -36,8 +35,7 @@ function App() {
       <h1 className="title">PokeAPI</h1>
       <main>
         <section className="search">
-          <SearchBar />
-          <PokemonList />
+          <Search />
         </section>
         <section className="display">
           {Object.keys(pokemon).length > 0 && (

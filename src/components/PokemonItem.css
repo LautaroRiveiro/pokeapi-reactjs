@@ -1,0 +1,14 @@
+.pokemon-item {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  background-color: seashell;
+  cursor: pointer;
+}
+
+.pokemon-item span {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}

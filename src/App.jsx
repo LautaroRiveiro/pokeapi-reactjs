@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { Card, Search } from "./components"
 import { PokemonContext } from "./Context"
+import './App.css'
 
 function App() {
 

@@ -3,4 +3,6 @@
   flex-direction: column;
   justify-content: start;
   padding: 0 1rem;
+  /* TODO: No me convence la altura acá */
+  height: 80vh;
 }

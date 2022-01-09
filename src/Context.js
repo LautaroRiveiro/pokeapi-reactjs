@@ -6,7 +6,7 @@ export const PokemonContext = React.createContext({})
 export const PokemonContextProvider = ({children})=>{
 
   const [pokemones, setPokemones] = useState([])
-  const [pokemonId, setPokemonId] = useState('')
+  const [pokemonId, setPokemonId] = useState(Math.floor(Math.random() * (150 - 1 + 1) + 1))
 
   useEffect(()=>{
     fetch("https://pokeapi.co/api/v2/pokemon?limit=150")

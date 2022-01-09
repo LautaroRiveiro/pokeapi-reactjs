@@ -6,7 +6,6 @@ import './PokemonList.css'
 const PokemonList = ({ filter }) => {
 
   const { pokemones } = useContext(PokemonContext)
-  console.log({ pokemones })
 
   return (
     <div className='pokemon-list'>

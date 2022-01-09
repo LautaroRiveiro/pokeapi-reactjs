@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react"
-import { Card } from "./components/Card"
-import {PokemonContext} from './Context'
+import { Card, SearchBar, PokemonList } from "./components"
+import { PokemonContext } from './Context'
 
 function App() {
 
-  const {pokemones} = useContext(PokemonContext)
+  const { pokemones } = useContext(PokemonContext)
   const [pokemon, setPokemon] = useState({})
 
   useEffect(() => {
@@ -34,12 +34,20 @@ function App() {
   return (
     <div className="App">
       <h1 className="title">PokeAPI</h1>
-      {Object.keys(pokemon).length > 0 && (
-        <>
-          <Card data={pokemon} />
-          <button className="btn" onClick={getPokemon}> Reintentar </button>
-        </>
-      )}
+      <main>
+        <section className="search">
+          <SearchBar />
+          <PokemonList />
+        </section>
+        <section className="display">
+          {Object.keys(pokemon).length > 0 && (
+            <>
+              <Card data={pokemon} />
+              <button className="btn" onClick={getPokemon}> Reintentar </button>
+            </>
+          )}
+        </section>
+      </main>
     </div>
   )
 }

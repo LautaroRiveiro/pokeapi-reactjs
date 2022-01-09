@@ -1,6 +1,6 @@
 import './Card.css'
 
-export const Card = ({data}) => {
+const Card = ({data}) => {
 
   // const colors = data.types ? [data.types[0], data.types[1] || data.types[0]] : ['unknown', 'unknown']
   const colors = [data.types[0], data.types[1] || data.types[0]]
@@ -32,3 +32,5 @@ export const Card = ({data}) => {
     </div>
   )
 }
+
+export default Card

@@ -26,8 +26,6 @@
   --type-fairy: pink;
   --type-unknown: white;
   --type-shadow: dimgrey;
-
-
 }
 
 /* Box sizing */
@@ -45,13 +43,20 @@ html {
 /* Estilos */
 
 body {
-  display: flex;
-  justify-content: center;
   background: rgba(229, 240, 182, 0.25);
 }
 
-.App {
-  text-align: center;
+main {
+  display: flex;
+}
+
+.search {
+  border: 1px solid black;
+  width: 60%;
+}
+.display {
+  border: 1px solid black;
+  width: 40%;
 }
 
 .title {
